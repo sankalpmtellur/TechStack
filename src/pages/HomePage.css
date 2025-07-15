@@ -1,0 +1,286 @@
+/* HomePage.css - Engineering Student Edition 🚀 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4ff, #dbeafe);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.homepage {
+  padding: 4rem 2rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* 🔱 Title & Description */
+.homepage .heading {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.homepage p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+/* 🧭 Category Section */
+.category-section {
+  margin-top: 3rem;
+}
+
+.category-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.category-card {
+  background: linear-gradient(to right, #eef2ff, #e0f2fe);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #1e293b;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+.category-card:hover {
+  transform: scale(1.06);
+  background: linear-gradient(to right, #c7d2fe, #bae6fd);
+}
+
+.category-card.active {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #e0f2fe, #c7d2fe);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.icon {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  color: #2563eb;
+}
+
+/* 🔍 Search Bar */
+.search-bar-wrapper {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.search-bar {
+  width: 90%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* 🧰 Tools Section */
+.tools-section {
+  margin-top: 6rem;
+  padding: 0 1.5rem;
+}
+
+.tools-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* 🟪 Grid Layout */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 5rem 2rem;
+}
+
+/* 🎴 Tool Card */
+.tool-card {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.05), transparent);
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼 Logo */
+.tool-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+/* 🔡 Title */
+.tool-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.6rem;
+  z-index: 1;
+}
+
+/* 📄 Description */
+.tool-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  z-index: 1;
+}
+
+/* 🏷 Tags */
+.tool-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+}
+
+.tool-card .tags span {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+/* 🔗 Button */
+.tool-card a {
+  margin-top: auto;
+  background: linear-gradient(to right, #6366f1, #3b82f6);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.tool-card a:hover {
+  background: linear-gradient(to right, #4f46e5, #2563eb);
+}
+
+/* ❗ No Tools Message */
+.no-tools {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e2e8f0;
+  color: #1f2937;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.page-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.page-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
